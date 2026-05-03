@@ -21,7 +21,7 @@ I'm a graduate student at the University of Southern California (USC), passionat
 ### 📫 Let's Connect
 * [LinkedIn](https://www.linkedin.com/in/shubhmishra19/)
 * [Portfolio Website](shubhmishra.vercel.app)
-* Email: your.email@usc.edu
+* Email: mishrashubh.1912@gmail.com
 
 ---
 <div align="center">
