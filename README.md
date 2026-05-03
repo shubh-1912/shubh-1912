@@ -5,7 +5,7 @@ I'm a graduate student at the University of Southern California (USC), passionat
 ### 🔭 Currently Working On
 * Exploring query scheduling extensions for **DuckDB**.
 * Sharpening my algorithmic problem-solving through **Competitive Programming** in C++.
-* Tinkering with database internals, particularly PostgreSQL B-trees and asynchronous checkpointing.
+* Building a visual similarity search engine using **Neo4j vector indexing**, **PyTorch (CLIP)**, and **FastAPI**.
 
 ### 🛠️ Tech Stack & Tools
 * **Languages:** C++, Go, Python, JavaScript/TypeScript
@@ -25,6 +25,6 @@ I'm a graduate student at the University of Southern California (USC), passionat
 
 ---
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical" alt="Your GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=radical" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=shubh-1912&show_icons=true&theme=radical" alt="Your GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shubh-1912&layout=compact&theme=radical" alt="Top Languages" />
 </div>
