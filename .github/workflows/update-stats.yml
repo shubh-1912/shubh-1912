@@ -15,14 +15,31 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      # Custom card with no rank, because the stats action has no repo count option.
       - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&hide_border=true&theme=transparent
-          path: profile/stats.svg
-          token: ${{ secrets.STATS_PAT }}
-          fail_on_error: "true"
+        env:
+          GH_TOKEN: ${{ secrets.STATS_PAT }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+          repos=$(gh api graphql -f query='query { viewer { repositories(ownerAffiliations: OWNER) { totalCount } } }' --jq '.data.viewer.repositories.totalCount')
+          commits=$(gh api -X GET search/commits -f q="author:$OWNER" --jq '.total_count')
+          [[ "$repos" =~ ^[0-9]+$ && "$commits" =~ ^[0-9]+$ ]]
+          mkdir -p profile
+          cat > profile/stats.svg <<EOF
+          <svg xmlns="http://www.w3.org/2000/svg" width="300" height="112" viewBox="0 0 300 112" role="img" aria-label="$repos repositories, $commits commits">
+            <style>
+              text { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; font-weight: 600; }
+              .title { font-size: 18px; fill: #006AFF; }
+              .row { font-size: 14px; fill: #417E87; }
+            </style>
+            <text class="title" x="20" y="32">Shubh Mishra's GitHub Stats</text>
+            <text class="row" x="20" y="66">Repositories</text>
+            <text class="row" x="280" y="66" text-anchor="end">$repos</text>
+            <text class="row" x="20" y="92">Commits</text>
+            <text class="row" x="280" y="92" text-anchor="end">$commits</text>
+          </svg>
+          EOF
 
       # postgresql-17.4-optimized is left out because upstream PostgreSQL's C code
       # would otherwise dwarf every other language on the card.
