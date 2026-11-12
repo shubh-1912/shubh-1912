@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="112" viewBox="0 0 300 112" role="img" aria-label="10 repositories, 94 commits">
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="112" viewBox="0 0 300 112" role="img" aria-label="11 repositories, 94 commits">
   <style>
     text { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; font-weight: 600; }
     .title { font-size: 18px; fill: #006AFF; }
@@ -6,7 +6,7 @@
   </style>
   <text class="title" x="20" y="32">Shubh Mishra's GitHub Stats</text>
   <text class="row" x="20" y="66">Repositories</text>
-  <text class="row" x="280" y="66" text-anchor="end">10</text>
+  <text class="row" x="280" y="66" text-anchor="end">11</text>
   <text class="row" x="20" y="92">Commits</text>
   <text class="row" x="280" y="92" text-anchor="end">94</text>
 </svg>
